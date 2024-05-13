@@ -5,8 +5,8 @@ public class Conta {
     private int agencia;
     private double saldo;
 
-    public Conta(){
-
+    public Conta(int numero){
+        this.numero = numero;
     }
     public Conta(int numero, int agencia, double saldo){
         this.numero = numero;
