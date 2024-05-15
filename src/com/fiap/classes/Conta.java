@@ -1,9 +1,9 @@
 package com.fiap.classes;
 
-public class Conta {
+public abstract class Conta {
     private int numero;
     private int agencia;
-    private double saldo;
+    protected double saldo;
 
     public Conta(int numero){
         this.numero = numero;
@@ -18,9 +18,7 @@ public class Conta {
         this.saldo += valor;
     }
 
-    public double verificarSaldo(){
-        return saldo;
-    }
+    public abstract double verificarSaldo();
 
     public void retirar(double valor){
         saldo = saldo -valor;

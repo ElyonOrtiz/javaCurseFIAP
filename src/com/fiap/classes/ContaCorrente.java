@@ -4,7 +4,6 @@ import com.fiap.classes.Conta;
 
 public class ContaCorrente extends Conta {
     private String tipo;
-
     private double chequeEspecial;
 
     public ContaCorrente(int numero, String tipo){
@@ -29,7 +28,12 @@ public class ContaCorrente extends Conta {
     }
 
     public double getSaldoDisponivel(){
-        return getSaldo() + this.chequeEspecial;
+        return  getSaldo() + this.chequeEspecial;
+    }
+
+    @Override
+    public double verificarSaldo() {
+        return getSaldoDisponivel();
     }
 
     @Override
